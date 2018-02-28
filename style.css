@@ -1,0 +1,13 @@
+body {
+    background-color: #fff;
+}
+
+
+/* Navigation */
+
+.navigation ul, li {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 2px;
+}
