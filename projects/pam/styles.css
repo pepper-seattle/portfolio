@@ -1,0 +1,79 @@
+/* Notes */
+/* Using em for sizing as this appears to be the preference given on the style guide and I want to be consistent. 
+Would prefer to use px for font sizing, but again, consistency. */
+
+/* Element Styling */
+body {
+    text-align: center;
+    background-color: #36697c;
+    color: #fff;
+    font-family: Arvo, "Times New Roman", serif;
+}
+
+h1 {
+    font-size: 5.143em;
+}
+
+h2 {
+    margin: 0.25em 0 0.25em;
+    font-size: 2em;
+}
+
+/* Grid Styling */
+table,
+tr,
+td {
+    border: 0.071em solid #000;
+    background-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td {
+    min-width: 1.25em;
+    height: 1.25em;
+}
+
+.grid {
+    margin-top: 2em;
+}
+
+
+/* Form Styling */
+.tools {
+    padding: 1em;
+    font-size: 0.875em;
+    background-color: #fff;
+    color: #36697c;
+}
+
+input[type=number] {
+    width: 4em;
+}
+
+input[type=color] {
+    width: 10em;
+    border-style: none;
+}
+
+.size, 
+.color-div, 
+.buttons {
+    padding: 0.5em;
+}
+
+
+/* Button Styling */
+#submit-button, 
+#reset-button {
+    padding: 0.5em;
+    margin: 0.10em 0.5em 0.10em;
+    border-radius: 0.25em;
+    background-color: #efefef;
+    color: #1a1c1d;
+    font: bold 0.875em Arial, Helvetica, sans-serif;
+}
+
