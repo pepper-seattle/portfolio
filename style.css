@@ -1,37 +1,50 @@
 h1, h2, h3 {
-    font-family: Futura, Helvetica, sans-serif;
+    font-family: Montserrat, 'Open Sans', sans-serif;
 }
 
 p {
-    font-family: Garamond, Helvetica, sans-serif;
+    font: 18px 'Open Sans', Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: 'pointer';
+    color: #1275D5;
 }
 
 /* Navigation */
 
 header {
     display: flex;
-    position: fixed;
-    justify-content: flex-end;
     top: 0;
     width: 100%;
-    height: 56px;
-    font: 900 26px Montserrat, Futura, sans-serif;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); */
 }
 
-nav ul {
+.navigation {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.dropdown-menu ul {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     list-style: none;
+    font: 900 22px Montserrat, Futura, sans-serif;
 } 
 
-nav li {
-    padding: 0px 12px 0px;
+.dropdown-menu li:first-child {
+    margin-right: auto;
 }
 
-a {
-    text-decoration: none;
+.dropdown-menu a {
+    flex-grow: 1;
     color: #000;
+}
+
+.dropdown-menu a:hover {
+    color: #1275D5;
 }
 
 .hamburger-menu {
@@ -69,6 +82,44 @@ footer {
     text-transform: uppercase;
 }
 
+/* About Me Section */
+
+.about-me-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+
+.about-me-section img {
+    margin: 20px;
+    align-items: flex-start;
+    width: 25%;
+}
+
+.about-me-text {
+    padding: 20px;
+}
+
+.learn-more {
+    padding: 15px 0;
+}
+
+.learn-more-link {
+    margin-top: 10px;
+    padding: 4px 8px;
+    font-size: 20px;
+    background: #1275D5;
+    color: #fff;
+}
+
+.learn-more-link:hover {
+    background: #fff;
+    color: #1275D5;
+}
+
 
 /* Media Queries */
 
@@ -95,13 +146,40 @@ footer {
     .is-open .dropdown-menu {
         display: block;
     }
+
+    .about-me-section {
+        flex-direction: column;
+    }
+
+    .about-me-section img {
+        margin-bottom: 0;
+    }
+
+    .about-me-text, 
+    .about-me-text p {
+        margin-top: 0;
+    }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1055px) {
+    p {
+        font-size: 22px;
+    }
+
     nav ul {
         flex-wrap: wrap;
     }
+
     nav ul li {
         letter-spacing: 2px;
+    }
+
+    .index-container img {
+        max-width: 1000px;
+    }
+
+    .about-me-section {
+        margin: auto;
+        max-width: 1000px;
     }
 }
