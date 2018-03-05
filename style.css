@@ -38,6 +38,10 @@ header {
     margin-right: auto;
 }
 
+.dropdown-menu li {
+    padding: 0 5px;
+}
+
 .dropdown-menu a {
     flex-grow: 1;
     color: #000;
