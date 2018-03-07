@@ -44,7 +44,7 @@ header {
 
 .dropdown-menu a {
     flex-grow: 1;
-    color: #000;
+    color: #1a1c1d;
 }
 
 .dropdown-menu a:hover {
@@ -93,7 +93,7 @@ footer {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    background: #000;
+    background: #1a1c1d;
     color: #fff;
 }
 
@@ -131,9 +131,20 @@ footer {
     nav {
         width: 100%;
     }
+
     nav ul {
         width: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
+
+    nav ul li {
+        letter-spacing: 1px;
+        padding: 1px;
+    }
+
     .dropdown-menu {
         display: none;
         width: 240px;
@@ -141,14 +152,14 @@ footer {
 
     .hamburger-menu svg.close-icon,
     .is-open .hamburger-menu svg.menu-icon {
-        display: none;
+      display: none;
     }
-
+    
     .hamburger-menu,
     .hamburger-menu svg.menu-icon,
     .is-open .hamburger-menu svg.close-icon,
     .is-open .dropdown-menu {
-        display: block;
+      display: block;
     }
 
     .about-me-section {
