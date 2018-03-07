@@ -57,11 +57,23 @@
         <script>
         
         window.addEventListener('keydown', function(e) {
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"`);
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"`); //selects the audio for the given key code
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"`); //selects the key for the given key code
+
             if(!audio) return; //keeps function from running if no audio element
-        
+            audio.currentTime = 0; //rewinds the audio file to the start so that it can play repeatedly quickly
             audio.play();
+            key.classList.add('playing');
         });
+
+            function removeTransition(e) {
+                if (e.propertyName !== 'transform') return; //skips anything that isn't a transform
+                this.classList.remove('playing');
+                }
+
+            const keys = document.querySelectorAll('.key');
+            keys.forEach( key => key.addEventListener('transitionend', removeTransition));
+            
 
         </script>
     </body>
