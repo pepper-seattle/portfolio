@@ -63,12 +63,12 @@
             if(!audio) return; //keeps function from running if no audio element
             audio.currentTime = 0; //rewinds the audio file to the start so that it can play repeatedly quickly
             audio.play();
-            key.classList.add('playing');
+            key.classList.add('playing'); 
         });
 
             function removeTransition(e) {
                 if (e.propertyName !== 'transform') return; //skips anything that isn't a transform
-                this.classList.remove('playing');
+                this.classList.remove('playing'); 
                 }
 
             const keys = document.querySelectorAll('.key');
