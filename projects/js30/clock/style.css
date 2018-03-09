@@ -1,0 +1,51 @@
+body {
+    background: url("desk.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.clock {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 10px solid white;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: #3d3d3d;
+}
+
+.clock-center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: white;
+}
+
+/* transform-origin allows us to hinge the hands on their far right ends
+    transform: rotate(90deg) starts the hands pointing at 12
+    transition: all... is how quickly the hands move
+    transition-timing-function: is how they move */
+.hand {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 6px;
+    background: white;
+    transform-origin: 100%;
+    transform: rotate(90deg); 
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.02, 2.7, 0.58, 1);
+}
