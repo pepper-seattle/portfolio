@@ -1,0 +1,18 @@
+With the data provided, please make this look like the results on the SCP home page (https://streamate.com/?DEBUG_react=1)
+
+Notes:
+- Go ahead and assume you can just take an array som instead of:
+
+    {
+      "data": 
+it would be const data = [.....]
+- Want a box with: name, country, and age
+- keep in mind that the boxes resize and have maybe a 1px space around all sides
+  + make them gray with white text and have the page background be black
+
+Requirements:
+- render a grid of gray boxes that resize with the page and have 1px of space on all sides
+- white text with name, country, and age 
+  + also place their status in the upper right (maybe style this like how goldshow shows up on that page with red for offline and green for online)
+- black background
+- link 'show only US models'
