@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #2B2B2B;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #F6F6F6;
+}
+
+h2 {
+    display: inline;
+    font-weight: lighter;
+}
+
+input[type=color]{
+    width: 100px;
+}
+
+img {
+    width: 80%;
+}
