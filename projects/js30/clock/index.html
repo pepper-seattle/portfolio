@@ -5,39 +5,53 @@
 </head>
 <body>
     <div class="clock">
-        <div class="clock-center"></div>
+        <div class="clock-face">
         <div class="hand sec-hand"></div>
-        
         <div class="hand min-hand"></div>
-        
         <div class="hand hour-hand"></div>
+    </div>
     </div>
 
     <script>
+    const hands = document.querySelector('.hand');
     const secondHand = document.querySelector('.sec-hand');
     const minuteHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
 
+    //Used in if statement below
+    let sDegrees = 0;
+    let mDegrees = 0;
+    let hDegrees = 0;
 
     function setDate() {
         const now = new Date();
-
-        const seconds = now.getSeconds();
-        const secondDegrees = (((seconds / 60) * 360) + 90);
-        secondHand.style.transform = `rotate(${secondDegrees}deg)`;
         
-
+        const seconds = now.getSeconds();
+        const secondDegrees = ((((sDegrees + seconds) / 60) * 360) + 90);
+        
         const minutes = now.getMinutes();
-        const minuteDegrees = (((minutes) * 360) + 90);
-        minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
-
+        const minuteDegrees = ((((mDegrees + minutes) / 60) * 360) + 90);
 
         const hours = now.getHours();
-        const hourDegrees = (((hours) / 360) + 90);
+        const hourDegrees = ((((hDegrees + hours) / 12) * 360) + 90);
+
+        //Keeps hands from ticking back around
+        if(seconds == 59)
+            sDegrees = sDegrees + 60;
+        
+        if(seconds == 59 && minutes == 59){
+            mDegrees = mDegrees + 60;
+        }
+        if(seconds == 59 && minutes == 59 && hours == 11) {
+            hourDegrees = hourDegrees + 12;
+        }
+        
+        //Runs the rotation based on the degrees calculated above
+        secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+        minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
         hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
     }
-
     
     setInterval(setDate, 1000);
     </script>
