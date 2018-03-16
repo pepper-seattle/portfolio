@@ -103,8 +103,8 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     const nameSort = inventors.sort(function(a, b) {
-        let nameA = a.first.toLowerCase(),
-        nameB = b.first.toLowerCase();
+        let nameA = a.last.toLowerCase(),
+        nameB = b.last.toLowerCase();
         if(nameA < nameB){
             return -1;
         }
@@ -114,11 +114,37 @@
         return 0;
     });
 
-    console.table(nameSort);
+    // console.table(nameSort);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    
+    function countArrayItems(og) {
+        const dataCount = [];
+        const myCopy = og.slice(0);
+
+        for(let i = 0; i < og.length; i++) {
+            let myCount = 0;
+            for(let w = 0; w < myCopy.length; w++) {
+                if(og[i] == myCopy[w]) {
+                    myCount++;
+                    delete myCopy[w];
+                }
+            }
+            if(myCount > 0) {
+                let a = new Object();
+                a.value = og[i];
+                a.count = myCount;
+                dataCount.push(a);
+            }
+        }
+        return dataCount;
+    };
+
+    const newArray = countArrayItems(data);
+    console.table(newArray);
+  
   </script>
 </body>
 </html>
