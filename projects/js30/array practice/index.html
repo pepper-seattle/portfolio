@@ -114,12 +114,21 @@
         return 0;
     });
 
+    //wes bos way
+    const alpha = people.sort((lastOne, nextOne) => {
+        const [aLast, aFirst] = lastOne.split(', ');
+        const [bLast, bFirst] = nextOne.split(', ');
+        return aLast > bLast ? 1 : -1;
+    });
+    constole.table(alpha);
+
     // console.table(nameSort);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     
+    //long way
     function countArrayItems(og) {
         const dataCount = [];
         const myCopy = og.slice(0);
@@ -143,7 +152,20 @@
     };
 
     const newArray = countArrayItems(data);
-    console.table(newArray);
+    // console.table(newArray);
+
+    //wes bos way
+    //steps: start with a blank object (the empty {} at the end of the function), loop over the objects to 
+    //see if there's a 0 there, 
+    const transportation = data.reduce(function(obj, item) {
+        if(!obj[item]) {
+            obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+    }, {});
+
+    console.log(transportation);
   
   </script>
 </body>
