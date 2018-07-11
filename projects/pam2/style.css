@@ -1,0 +1,85 @@
+/* Elements */
+
+body {
+  background-color: rgb(31, 31, 31);
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  margin: 0;
+}
+
+input {
+  height: 20px;
+  width: 35px;
+  margin: 10px;
+}
+
+/* Header */
+
+.color {
+  align-content: center;
+  background-color: #d51224;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#color-picker {
+  height: 25px;
+}
+
+.header {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding: 0;
+  text-align: center;
+}
+
+.submit {
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
+  height: 25px;
+}
+
+.submit:focus {
+  outline:0;
+}
+
+/* .submit:hover {
+  background-color: rgba(155, 155, 155, 0.502);
+  cursor: pointer;
+} */
+
+.title {
+  color: #1275D5;
+  font-family: Montserrat, 'Open Sans', sans-serif;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  background-color: #414141;
+  min-width: 100%;
+}
+
+/* Grid */
+
+.grid-values {
+  background-color: #9b9b9b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
