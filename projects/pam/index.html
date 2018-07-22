@@ -10,32 +10,29 @@
     <h1>Pixel Art Maker</h1>
 
     <h2>TOOLS</h2>
-    <div class="tools">
-        <form>
+    <div class="toolbox">
+        <form id="tools">
             <div class="size">
                 GRID SIZE: 
-                <input type="number" id="input-height" name="height" min="1" value="10" >
+                <input type="number" id="inputHeight" name="height" min="1" value="10" >
                 x
-                <input type="number" id="input-width" name="width" min="1" value="10">
+                <input type="number" id="inputWidth" name="width" min="1" value="10">
             </div>
 
-            <div class="color-div">
+            <div class="colorDiv">
                 COLOR:
-                <input type="color" id="color-picker" value="#0080ff">
+                <input type="color" id="colorPicker">
             </div>
             
             <div class="buttons">
-                <button id="submit-button" type=submit>BUILD</button>
-                <button id="reset-button">RESET</button>
+                <input id="submitButton" type=submit />
+                <button id="resetButton">RESET</button>
             </div>
         </form>
     </div>
 
-    <div class="grid">
-        <table id="pixel-canvas">
-        </table>
-    </div>
+    <table id="pixelCanvas"></table>
 
-    <script type="text/javascript" src="design.js"></script>
+    <script src="designs.js"></script>
 </body>
 </html>

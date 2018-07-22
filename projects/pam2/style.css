@@ -19,7 +19,7 @@ input {
 
 /* Header */
 
-.color {
+#color {
   align-content: center;
   background-color: #d51224;
   color: #fff;
@@ -43,7 +43,7 @@ input {
   text-align: center;
 }
 
-.submit {
+#submit {
   -moz-border-radius: 0 0 10px 10px;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
@@ -51,16 +51,16 @@ input {
   height: 25px;
 }
 
-.submit:focus {
+#submit:focus {
   outline:0;
 }
 
-/* .submit:hover {
+#submit:hover {
   background-color: rgba(155, 155, 155, 0.502);
   cursor: pointer;
-} */
+}
 
-.title {
+#title {
   color: #1275D5;
   font-family: Montserrat, 'Open Sans', sans-serif;
   font-weight: bold;
@@ -76,7 +76,19 @@ input {
 
 /* Grid */
 
-.grid-values {
+table,
+tr,
+td {
+    border: 0.071em solid #000;
+    background-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#grid-values {
   background-color: #9b9b9b;
   display: flex;
   flex-direction: row;

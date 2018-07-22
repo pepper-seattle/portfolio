@@ -19,31 +19,24 @@ h2 {
     font-size: 2em;
 }
 
-/* Grid Styling */
-table,
-tr,
-td {
-    border: 0.071em solid #000;
-    background-color: #fff;
-}
-
+/* Table Styling */
 table {
+    display: flex;
+    justify-content: center;
     border-collapse: collapse;
-    margin: 0 auto;
+    margin-top: 2em;
 }
 
 td {
+    background-color: #fff;
+    border: 0.071em solid rgb(116, 24, 202);
     min-width: 1.25em;
     height: 1.25em;
 }
 
-.grid {
-    margin-top: 2em;
-}
-
 
 /* Form Styling */
-.tools {
+.toolbox {
     padding: 1em;
     font-size: 0.875em;
     background-color: #fff;
@@ -60,15 +53,15 @@ input[type=color] {
 }
 
 .size, 
-.color-div, 
+.colorDiv, 
 .buttons {
     padding: 0.5em;
 }
 
 
 /* Button Styling */
-#submit-button, 
-#reset-button {
+#submitButton, 
+#resetButton {
     padding: 0.5em;
     margin: 0.10em 0.5em 0.10em;
     border-radius: 0.25em;
