@@ -124,6 +124,17 @@ footer {
     color: #1275D5;
 }
 
+/* Projects Page */
+
+.card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    background-color: #1a1c1d;
+}
+
 
 /* Media Queries */
 

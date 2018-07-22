@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  </head>
+  <body>
+    <div class="header">
+      <div id="title">
+        <h1>Pixel Art Maker</h1>
+      </div>
+
+      <div class="tools">
+          <div id="color">
+            <p>Color: </p>
+            <input id="color-picker" type="color" value="#1275D5" />
+          </div>
+
+          <div id="grid-values">
+            <input type="number" value="25" min="1" max="500" id="inputX" />
+            <p>x</p>
+            <input type="number" value="25" min="1" max="500" id="inputY" />
+          </div>
+
+        <button id="submit">New Grid</button>
+      </div>
+    </div>
+
+      <div class="grid">
+        <table id="canvas"></table>
+      </div>
+    <script src="design.js"></script>
+  </body>
+</html>
